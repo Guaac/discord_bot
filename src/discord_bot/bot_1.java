@@ -11,8 +11,7 @@ public class bot_1 {
 		
 		try {
 			JDA jda = new
-			JDABuilder("NjkxNTU2OTUzMTI1NjgzMjAz.Xnhsrg.ono7mhMQDhT"
-					+ "5nc7cyC-9SwIEe84").build();
+			JDABuilder(System.getenv("BBot")).build();
 			jda.addEventListener(new bbot());
 		} catch (LoginException e) {
 			e.printStackTrace();

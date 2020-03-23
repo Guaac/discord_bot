@@ -7,9 +7,9 @@ public class bbot extends ListenerAdapter {
 
 	@Override
 	public void onMessageReceived(MessageReceivedEvent event) {
-	event.getMessage().getContentRaw();
-		super.onMessageReceived(event);
+		if(event.getAuthor().isBot()){return;}
+		event.getTextChannel().sendMessage("ธÞที").queue();
 		System.out.println(event.getMessage().getContentRaw());
-	}
 	
+	}
 }
